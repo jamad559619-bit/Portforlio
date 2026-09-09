@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jake Amad | Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: rgba(15, 23, 42, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul a {
+            text-decoration: none;
+            color: #cbd5e1;
+            transition: 0.3s;
+        }
+
+        nav ul a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 10%;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #38bdf8;
+            margin-bottom: 25px;
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero h3 {
+            color: #94a3b8;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 13px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        .primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+        }
+
+        .secondary {
+            border: 1px solid #38bdf8;
+            color: #38bdf8;
+        }
+
+        .secondary:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            color: #38bdf8;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: rgba(30, 41, 59, 0.7);
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            border-color: #38bdf8;
+        }
+
+        .skill-card h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .about-container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(30, 41, 59, 0.7);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            line-height: 1.8;
+            color: #cbd5e1;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #020617;
+            color: #64748b;
+        }
+
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            section {
+                padding: 60px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Profile<span>.</span></div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <img src="miku.gif" alt="Profile Picture" class="profile-image">
+
+            <h1>Hello, I'm <span>Jake</span></h1>
+
+            <h3>Information Technology Student</h3>
+
+            <p>
+                I am an aspiring IT professional passionate about technology,
+                programming, and building useful digital solutions. I am
+                continuously improving my skills through academic projects
+                and hands-on learning.
+            </p>
+
+            <div class="buttons">
+                <a href="#about" class="btn primary">About Me</a>
+                <a href="#contact" class="btn secondary">Contact</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="about">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <div class="about-container">
+            <p>
+                I am currently pursuing a Bachelor of Science in Information
+                Technology. My interests include web development, programming,
+                databases, and technology. I enjoy learning new skills and
+                creating systems that can help solve real-world problems.
+            </p>
+        </div>
+
+    </section>
+
+    <section id="skills">
+
+        <h2 class="section-title">
+            My <span>Skills</span>
+        </h2>
+
+        <div class="skills-container">
+
+            <div class="skill-card">
+                <h3>HTML</h3>
+                <p>Web Structure</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>CSS</h3>
+                <p>Web Design</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Java</h3>
+                <p>Programming</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Python</h3>
+                <p>Programming</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>MySQL</h3>
+                <p>Database Management</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Git</h3>
+                <p>Version Control</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="contact" id="contact">
+
+        <h2 class="section-title">
+            Get In <span>Touch</span>
+        </h2>
+
+        <p>
+            Feel free to contact me for projects, collaborations,
+            or professional opportunities.
+        </p>
+
+        <a href="mailto:your@email.com" class="btn primary">
+            Send Me an Email
+        </a>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Jake Amad. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
